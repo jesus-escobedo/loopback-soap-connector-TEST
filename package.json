@@ -1,0 +1,69 @@
+{
+  "name": "loopback-connector-soap",
+  "version": "2.3.0",
+  "description": "LoopBack SOAP Web Services Connector",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec --timeout 30000 test/*test.js"
+  },
+  "dependencies": {
+    "debug": "^2.1.1",
+    "request": "^2.55.0",
+    "soap": "^0.10.3",
+    "strongloop-license": "^1.0.2",
+    "sl-blip": "http://blip.strongloop.com/loopback-connector-soap@2.3.0"
+  },
+  "devDependencies": {
+    "loopback-datasource-juggler": "2.x.x",
+    "loopback": "2.x.x",
+    "should": "~5.0.1",
+    "mocha": "~2.1.0",
+    "loopback-explorer": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/loopback-connector-soap.git"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "optionalDependencies": {
+    "sl-blip": "http://blip.strongloop.com/loopback-connector-soap@2.3.0"
+  },
+  "gitHead": "937ce47693eb7ed384c75725c420ed28e6ee81e2",
+  "bugs": {
+    "url": "https://github.com/strongloop/loopback-connector-soap/issues"
+  },
+  "homepage": "https://github.com/strongloop/loopback-connector-soap",
+  "_id": "loopback-connector-soap@2.3.0",
+  "_shasum": "09fadfa81face95a9b8e71f71ea6b9fa861296f4",
+  "_from": "loopback-connector-soap@^2.3.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "rfeng",
+    "email": "enjoyjava@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "rfeng",
+      "email": "enjoyjava@gmail.com"
+    },
+    {
+      "name": "ritch",
+      "email": "skawful@gmail.com"
+    },
+    {
+      "name": "strongloop",
+      "email": "callback@strongloop.com"
+    },
+    {
+      "name": "bajtos",
+      "email": "miro.bajtos@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "09fadfa81face95a9b8e71f71ea6b9fa861296f4",
+    "tarball": "http://registry.npmjs.org/loopback-connector-soap/-/loopback-connector-soap-2.3.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/loopback-connector-soap/-/loopback-connector-soap-2.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

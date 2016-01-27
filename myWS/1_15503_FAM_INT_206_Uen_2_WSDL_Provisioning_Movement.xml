@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. -->
+<xs:schema xmlns:tns="http://ws.ipline.intech.com/" xmlns:ns2="OUTPUT" xmlns:ns1="INPUT" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.ipline.intech.com/">
+
+<xs:import namespace="INPUT" schemaLocation="http://localhost:8081/IPLineWebService/Provisioning?xsd=3"/>
+
+<xs:import namespace="OUTPUT" schemaLocation="http://localhost:8081/IPLineWebService/Provisioning?xsd=2"/>
+
+<xs:element name="processProvisioning" type="tns:processProvisioning"/>
+
+<xs:element name="processProvisioningResponse" type="tns:processProvisioningResponse"/>
+
+<xs:complexType name="processProvisioning">
+<xs:sequence>
+<xs:element name="MOVEMENT" type="tns:movement" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movement">
+<xs:sequence>
+<xs:element name="CALL_WAITING" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB" type="ns1:CFB" minOccurs="0"/>
+<xs:element name="CFFM" type="ns1:CFFM" minOccurs="0"/>
+<xs:element name="CFNA" type="ns1:CFNA" minOccurs="0"/>
+<xs:element name="CFU" type="ns1:CFU" minOccurs="0"/>
+<xs:element name="COMPANY" type="ns1:COMPANY" minOccurs="0"/>
+<xs:element name="CUSTOM_FEATURES" type="ns1:CUSTOM_FEATURES" minOccurs="0"/>
+<xs:element name="EXTENSION" type="ns1:EXTENSION" minOccurs="0"/>
+<xs:element name="HUNT_GROUP" type="ns1:HUNT_GROUP" minOccurs="0"/>
+<xs:element name="ICB" type="ns1:ICB" minOccurs="0"/>
+<xs:element name="LINE_TYPE" type="xs:string" minOccurs="0"/>
+<xs:element name="MOV_DETA" type="xs:string" minOccurs="0"/>
+<xs:element name="MOV_TYPE" type="xs:string" minOccurs="0"/>
+<xs:element name="MULTISITE" type="xs:string" minOccurs="0"/>
+<xs:element name="NIP_CALL_REST" type="tns:nipCallRestriction" minOccurs="0"/>
+<xs:element name="NUMBERS" type="tns:numbers" minOccurs="0"/>
+<xs:element name="OCB" type="ns1:OCB" minOccurs="0"/>
+<xs:element name="OFFNET" type="xs:string" minOccurs="0"/>
+<xs:element name="OFFNET_SIM_CALLS" type="xs:string" minOccurs="0"/>
+<xs:element name="ORIGINAL_COMPANY" type="xs:string" minOccurs="0"/>
+<xs:element name="OUTGOINGCALLBARRING" type="ns1:OUTGOINGCALLBARRING" minOccurs="0"/>
+<xs:element name="PACKAGE" type="ns1:PACKAGE" minOccurs="0"/>
+<xs:element name="PRIVATE_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="PUBLIC_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="SERVICE_PROVIDER" type="xs:string" minOccurs="0"/>
+<xs:element name="SITE" type="ns1:SITE" minOccurs="0"/>
+<xs:element name="THREEWAY_CALL" type="xs:string" minOccurs="0"/>
+<xs:element name="USER" type="ns1:USER" minOccurs="0"/>
+<xs:element name="VOICE_MAIL" type="ns1:VOICE_MAIL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="numbers">
+<xs:sequence>
+<xs:element name="ACTION" type="xs:string" minOccurs="0"/>
+<xs:element name="FIRST_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="LAST_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="PROVIDER_CODE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nipCallRestriction">
+<xs:sequence>
+<xs:element name="NIP_CALL_REST_ACT" type="xs:string" minOccurs="0"/>
+<xs:element name="NIP_CALL_REST_BLOQ" type="xs:string" minOccurs="0"/>
+<xs:element name="NIP_CALL_REST_NUM" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="processProvisioningResponse">
+<xs:sequence>
+<xs:element name="RESULT" type="tns:outMovement" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="outMovement">
+<xs:sequence>
+<xs:element name="CALL_WAITING" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB" type="ns2:CFB" minOccurs="0"/>
+<xs:element name="CFFM" type="ns2:CFFM" minOccurs="0"/>
+<xs:element name="CFNA" type="ns2:CFNA" minOccurs="0"/>
+<xs:element name="CFU" type="ns2:CFU" minOccurs="0"/>
+<xs:element name="COMPANY" type="ns2:COMPANY" minOccurs="0"/>
+<xs:element name="CUSTOM_FEATURES" type="ns2:CUSTOM_FEATURES" minOccurs="0"/>
+<xs:element name="EXTENSION" type="ns2:EXTENSION" minOccurs="0"/>
+<xs:element name="GENERIC_RESULT" type="tns:genericResult" minOccurs="0"/>
+<xs:element name="HUNT_GROUP" type="ns2:HUNT_GROUP" minOccurs="0"/>
+<xs:element name="ICB" type="ns2:ICB" minOccurs="0"/>
+<xs:element name="MULTISITE" type="xs:string" minOccurs="0"/>
+<xs:element name="NIP_CALL_REST" type="ns2:NIP_CALL_RESTRICT" minOccurs="0"/>
+<xs:element name="NUMBER" type="ns2:NUMBER" minOccurs="0"/>
+<xs:element name="OCB" type="ns2:OCB" minOccurs="0"/>
+<xs:element name="OFFNET" type="xs:string" minOccurs="0"/>
+<xs:element name="OFFNET_SIM_CALLS" type="xs:string" minOccurs="0"/>
+<xs:element name="ORIGINAL_COMPANY" type="xs:string" minOccurs="0"/>
+<xs:element name="OUTGOINGCALLBARRING" type="ns2:OUTGOINGCALLBARRING" minOccurs="0"/>
+<xs:element name="PACKAGE" type="ns2:PACKAGE" minOccurs="0"/>
+<xs:element name="PRIVATE_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="PUBLIC_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="SERVICE_CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="SERVICE_PROVIDER" type="xs:string" minOccurs="0"/>
+<xs:element name="SITE" type="ns2:SITE" minOccurs="0"/>
+<xs:element name="THREEWAY_CALL" type="xs:string" minOccurs="0"/>
+<xs:element name="USER" type="ns2:USER" minOccurs="0"/>
+<xs:element name="VOICE_MAIL" type="ns2:VOICE_MAIL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="genericResult">
+<xs:sequence>
+<xs:element name="resultCode" type="xs:string" minOccurs="0"/>
+<xs:element name="resultDescription" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

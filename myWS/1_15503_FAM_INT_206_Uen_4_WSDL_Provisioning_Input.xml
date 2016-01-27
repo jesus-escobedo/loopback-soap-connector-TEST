@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. -->
+<xs:schema xmlns:tns="INPUT" xmlns:ns1="http://ws.ipline.intech.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="INPUT">
+
+<xs:import namespace="http://ws.ipline.intech.com/" schemaLocation="http://localhost:8081/IPLineWebService/Provisioning?xsd=1"/>
+
+<xs:complexType name="CFB">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB_ANNOUNCEMENT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB_ANNOUNCEMENT_NUM" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB_ATTENDANT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="CFB_VOICE_MAIL" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CFFM">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="CFFM_INFO" type="tns:CFFM_INFO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CFFM_INFO">
+<xs:sequence>
+<xs:element name="CFFM_NUMBER" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="CFFM_RING_SEQUEN" type="xs:string" minOccurs="0"/>
+<xs:element name="CFFM_RING_SIMULT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFFM_RING_TIMER" type="xs:string" minOccurs="0"/>
+<xs:element name="CFFM_TARGET" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="CFFM_TYPE" type="xs:string" minOccurs="0"/>
+<xs:element name="CFFM_VM" type="xs:string" minOccurs="0"/>
+<xs:element name="END_TIME" type="xs:string" minOccurs="0"/>
+<xs:element name="START_TIME" type="xs:string" minOccurs="0"/>
+<xs:element name="WEEK_DAYS" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CFNA">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="CFNA_ANNOUNCEMENT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFNA_ANNOUNCEMENT_NUM" type="xs:string" minOccurs="0"/>
+<xs:element name="CFNA_ATTENDANT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFNA_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="CFNA_TIMER" type="xs:string" minOccurs="0"/>
+<xs:element name="CFNA_VOICE_MAIL" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CFU">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="CFU_ANNOUNCEMENT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFU_ANNOUNCEMENT_NUM" type="xs:string" minOccurs="0"/>
+<xs:element name="CFU_ATTENDANT" type="xs:string" minOccurs="0"/>
+<xs:element name="CFU_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="CFU_VOICE_MAIL" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="COMPANY">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="ADDRESS" type="xs:string" minOccurs="0"/>
+<xs:element name="BUSINESS_COMPANY" type="xs:string" minOccurs="0"/>
+<xs:element name="CITY" type="xs:string" minOccurs="0"/>
+<xs:element name="CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="COMPANY_ADMIN" type="tns:USER" minOccurs="0"/>
+<xs:element name="COMPANY_PROVIDER" type="tns:PROVIDER" minOccurs="0"/>
+<xs:element name="CONTACT" type="xs:string" minOccurs="0"/>
+<xs:element name="CONTACT_EMAIL" type="xs:string" minOccurs="0"/>
+<xs:element name="COUNTRY" type="xs:string" minOccurs="0"/>
+<xs:element name="FISCAL_IDENTIFICATOR" type="xs:string" minOccurs="0"/>
+<xs:element name="NUMBERS" type="ns1:numbers" minOccurs="0"/>
+<xs:element name="PACKAGES_NAME" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="PHONE" type="xs:string" minOccurs="0"/>
+<xs:element name="STATE" type="xs:string" minOccurs="0"/>
+<xs:element name="SUPPORT_EMAIL" type="xs:string" minOccurs="0"/>
+<xs:element name="ZIP_CODE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="USER">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="LAST_NAME" type="xs:string" minOccurs="0"/>
+<xs:element name="LOGIN" type="xs:string" minOccurs="0"/>
+<xs:element name="NAME" type="xs:string" minOccurs="0"/>
+<xs:element name="PASSWORD" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PROVIDER">
+<xs:sequence>
+<xs:element name="CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="CONTACT" type="xs:string" minOccurs="0"/>
+<xs:element name="EMAIL" type="xs:string" minOccurs="0"/>
+<xs:element name="NAME" type="xs:string" minOccurs="0"/>
+<xs:element name="PHONE_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="SUPPORT_EMAIL" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CUSTOM_FEATURES">
+<xs:sequence>
+<xs:element name="CUSTOM_FEATURE" type="tns:CUSTOM_FEATURE" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CUSTOM_FEATURE">
+<xs:sequence>
+<xs:element name="NAME" type="xs:string" minOccurs="0"/>
+<xs:element name="PROPERTIES" type="tns:PROPERTIES" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PROPERTIES">
+<xs:sequence>
+<xs:element name="PROPERTY">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="key" minOccurs="0" type="xs:string"/>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EXTENSION">
+<xs:sequence>
+<xs:element name="CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="EXTENSION_MAIN_NUMBER" type="tns:NUMBER" minOccurs="0"/>
+<xs:element name="EXTENSION_NUMBER" type="tns:NUMBER" minOccurs="0"/>
+<xs:element name="EXTENSION_PACKAGE" type="tns:PACKAGE" minOccurs="0"/>
+<xs:element name="EXTENSION_SITE" type="tns:SITE" minOccurs="0"/>
+<xs:element name="EXTENSION_USER" type="tns:USER" minOccurs="0"/>
+<xs:element name="MAIN_LINE" type="xs:string" minOccurs="0"/>
+<xs:element name="OPERATOR" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NUMBER">
+<xs:sequence>
+<xs:element name="CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="NUMBER_COMPANY" type="tns:COMPANY" minOccurs="0"/>
+<xs:element name="NUMBER_PROVIDER" type="tns:PROVIDER" minOccurs="0"/>
+<xs:element name="STATUS_LINE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PACKAGE">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="FEATURES" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="PACKAGE_DESCRIPTION" type="xs:string" minOccurs="0"/>
+<xs:element name="PACKAGE_NAME" type="xs:string" minOccurs="0"/>
+<xs:element name="PROVIDER_CODE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SITE">
+<xs:sequence>
+<xs:element name="CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="SITE_ASL" type="xs:string" minOccurs="0"/>
+<xs:element name="SITE_COMPANY" type="tns:COMPANY" minOccurs="0"/>
+<xs:element name="SITE_DESCRIPTION" type="xs:string" minOccurs="0"/>
+<xs:element name="SITE_NAME" type="xs:string" minOccurs="0"/>
+<xs:element name="SITE_PACKAGE" type="tns:PACKAGE" minOccurs="0"/>
+<xs:element name="SITE_SERVER_FAX" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="HUNT_GROUP">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="HUNTGROUP_INFO" type="tns:HUNTGROUP_INFO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="HUNTGROUP_TYPE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="HUNTGROUP_INFO">
+<xs:sequence>
+<xs:element name="HUNTGROUP_NUMBER" type="xs:string" minOccurs="0"/>
+<xs:element name="HUNTGROUP_RING" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ICB">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="ICB_BL" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="ICB_WL" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="OCB">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_1800" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_1801" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_BL" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="OCB_INT" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_LOC" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_MOB" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_NAT" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_REST_UNLOCK" type="xs:string" minOccurs="0"/>
+<xs:element name="OCB_WL" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="OUTGOINGCALLBARRING">
+<xs:sequence>
+<xs:element name="OUTGOINGCALLBARRING_INFO" type="tns:OUTGOINGCALLBARRING_INFO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="OWNER_CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="PROVIDER_CODE" type="xs:string" minOccurs="0"/>
+<xs:element name="PROVIDER_OWNER_CODE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="OUTGOINGCALLBARRING_INFO">
+<xs:sequence>
+<xs:element name="OUTGOINGCALLBARRING_ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="OUTGOINGCALLBARRING_NUMBERS" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="VOICE_MAIL">
+<xs:sequence>
+<xs:element name="ACTIVE" type="xs:string" minOccurs="0"/>
+<xs:element name="VOICE_MAIL_BUSY" type="xs:string" minOccurs="0"/>
+<xs:element name="VOICE_MAIL_EMAIL" type="xs:string" minOccurs="0"/>
+<xs:element name="VOICE_MAIL_IMMED" type="xs:string" minOccurs="0"/>
+<xs:element name="VOICE_MAIL_NANSW" type="xs:string" minOccurs="0"/>
+<xs:element name="VOICE_MAIL_NUM" type="xs:string" minOccurs="0"/>
+<xs:element name="VOICE_MAIL_TIMER" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
